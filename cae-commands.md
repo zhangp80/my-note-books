@@ -1,20 +1,7 @@
 # CAE commands
 
-```java
-package com.example.serviceribbon.service;
+```shell
+docker tag example/service-ribbon containers.cisco.com/pengzha2/service-ribbon:latest
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
-
-@Service
-public class HelloService {
-
-    @Autowired
-    RestTemplate restTemplate;
-
-    public String hiService() {
-        return restTemplate.getForObject("http://zuul/service-hi/hi", String.class);
-    }
-}
+docker push containers.cisco.com/pengzha2/config-server:latest
 ```
